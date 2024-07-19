@@ -356,19 +356,21 @@ form button {
 .testBtn:hover{
     color: #000;
 }
-
 footer{
-    margin: 10rem 0;
     display: flex;
     justify-content: space-around;
     flex-direction: row;
-    gap: 2rem;
     width: 100%;
     height: 80vh;
+}
+.footerf{
+    margin: 4rem;
 }
  .footerMenu{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
  }
  .footerList{
     display: flex;
@@ -389,10 +391,17 @@ footer{
     color: #474747;
     text-align: start;
  }
+ .footerList li:hover{
+    color: rgb(241, 73, 7);
+ }
+ .footcol{
+    margin-right: 3rem;
+ }
 .conn{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
+    margin: 1rem;
 }
 .socialMedia{
     display: flex;
