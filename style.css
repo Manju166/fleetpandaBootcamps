@@ -40,7 +40,7 @@ a img{
     flex-direction: column;
     text-align: center;
     height: 100vh;
-    background-image: url(images\ \(2\).jpeg);
+    background-image: url(/images/images\ \(2\).jpeg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -164,7 +164,7 @@ label {
     margin: 10px 0;
 }
 
-input, select {
+input, textarea,select {
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
