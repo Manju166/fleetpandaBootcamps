@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="formSection">
+        <div class="form-container">
+            <form id="form" onsubmit="return validateForm()">
+                <h2>Sign Up</h2>
+                <label for="name">Name:</label>
+                <input type="text" name="name" id="name" minlength="5">
+                <span class="error" id="nameError"></span>
+    
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+                <span class="error" id="emailError"></span>            
+    
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" id="phone">
+                <span class="error" id="phoneError"></span>
+    
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+                <span class="error" id="passwordError"></span>
+    
+                <label for="country">Country:</label>
+                <select id="country" name="country" >
+                    <option value="Nepal">Nepal</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Australia">Australia</option>
+                </select>
+    
+                <button type="submit" value="submit">Submit</button>
+
+                <p style="margin-top: 2rem; text-align: center;">Already A Member? <a href="login.html" style="color: blue;">Login</a> </p>
+            </form>
+        </div>
+        <div class="formImage">
+            <img src="panda.png" alt="">
+            <p>For any query contact us at <a href="https://www.fleetpanda.com">FleetPanda</a></p>
+        </div>
+    </section>
+</body>
+</html>
