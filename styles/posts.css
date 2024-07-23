@@ -1,0 +1,79 @@
+header{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.nav{
+    border: 1px solid rgb(192, 188, 188);
+    border-radius: 20px;
+    height: 8vh;
+}
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: -2rem;
+}
+header img{
+    width: 20%;
+    height: 10vh;
+}
+ul li{
+    font-size: 18px;
+    font-weight: bold;
+}
+li a{
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+}
+a img{
+    width: 100%;
+}
+.logoutBtn{
+    background-color: chocolate;
+    padding: 8px;
+    width: 90px;
+    border: none;
+    border-radius: 5px;
+    color: #ddd;
+    font-size: 16px;
+}
+
+#postcontainer{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 20%;
+}
+#card h3 {
+    margin-top: 0;
+    height: 10vh;
+}
+#card p{
+    height: 25vh;
+}
+#card button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    margin: auto 4rem;
+}
