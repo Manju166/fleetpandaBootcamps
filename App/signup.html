@@ -9,7 +9,7 @@
   <body>
     <section class="formSection">
       <div class="form-container">
-        <form id="form" >
+        <form id="form" method="post" onsubmit="validateForm(event)">
           <h2>Sign Up</h2>
           <label for="name">Name:</label>
           <input type="text" name="name" id="name" minlength="5" />
@@ -23,7 +23,7 @@
           <input type="password" name="password" id="password" />
           <span class="error" id="passwordError"></span>
 
-          <button type="submit" onclick="saveData()">Submit</button>
+          <button type="submit" >Submit</button>
 
           <p style="margin-top: 2rem; text-align: center">
             Already A Member? <a href="login.html" style="color: blue">Login</a>

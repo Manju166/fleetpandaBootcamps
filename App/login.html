@@ -7,25 +7,36 @@
     <link rel="stylesheet" href="../styles/login.css" />
   </head>
   <body>
-    <form>
+    <form action="/index/login.html" onsubmit="validateForm(event)">
       <div class="loginform">
         <h1>Hello Welcome</h1>
-        <label for="username">Email:</label>
+
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+        />
+        <span id="nameError" style="color: red"></span>
+
+        <label for="email">Email:</label>
         <input
           type="email"
           name="email"
           id="email"
+          autocomplete="off"
           placeholder="Enter Email Address"
         />
         <span class="error" id="emailError"></span>
 
-        <label for="password">Password:</label>
+        <!-- <label for="password">Password:</label>
         <input
           type="password"
           name="password"
-          id="password"
+          id="password" autocomplete="off"
           placeholder="Enter Password"
-        />
+        /> -->
         <span class="error" id="passwordError"></span>
 
         <button type="submit" onclick="loginSubmit()">Login</button>

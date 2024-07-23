@@ -23,6 +23,9 @@ label{
 input{
     height: 2rem;
 }
+.loginform .error{
+    color: red;
+}
  .loginform button{
     height: 2rem;
     width: 5rem;

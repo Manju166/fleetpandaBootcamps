@@ -1,32 +1,49 @@
-function loginSubmit(){
-  document.getElementById("emailError").innerText = "";
-  document.getElementById("passwordError").innerText = "";
-
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  let isValid =true;
-  if (!email) {
-    document.getElementById("emailError").innerText = "Email is required";
-    isValid = false;
-}
-
-if (!password) {
-    document.getElementById("passwordError").innerText = "Password is required";
-    isValid = false;
-}
-
-if (isValid) {
-    const userRecords = JSON.parse(localStorage.getItem("users")) || [];
-    const user = userRecords.find(user => user.email === email && user.password === password);
-
-    if (user) {
-        alert("Login Successful");
-        window.location.href = "../index.html"; 
+function validateForm(event) {
+    event.preventDefault();
+    let isValid = false;
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const nameError = document.getElementById("nameError");
+    const emailError = document.getElementById("emailError");
+    //   const password = document.getElementById("password").value;
+    //   const errorPassword = document.getElementById("error_password");
+    if (name === "") {
+      nameError.textContent = "Username is required.";
     } else {
-        alert("Login Failed!! Email address and Password doesnot match");
+      nameError.textContent = "";
+      isValid = true;
     }
-}
-
-return isValid;
-}
+    if (email === "") {
+      emailError.textContent = "Email is required.";
+    } else {
+      emailError.textContent = "";
+      isValid = true;
+    }
+    //   if (password === "") {
+    //     errorPassword.textContent = "Password is required.";
+    //     isValid = false;
+    //   } else if (password.length < 6) {
+    //     errorPassword.textContent = "Password must be at least 6 characters long.";
+    //     isValid = false;
+    //   } else {
+    //     errorPassword.textContent = "";
+    //   }
+    if (isValid) {
+      fetch("https://jsonplaceholder.typicode.com/users")
+        .then((response) => response.json())
+        .then((users) => {
+          const user = users.find(
+            (user) => user.username === name && user.email === email
+          );
+          if (user) {
+              alert("Loged in successfully");
+              localStorage.setItem("name",user.name)
+              localStorage.setItem("email",user.email)
+              window.location = "posts.html"
+          } else {
+            alert("Incorrect Username or Email");
+          }
+        })
+        .catch((error) => console.log(error));
+    }
+  }
