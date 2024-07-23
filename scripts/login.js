@@ -47,3 +47,4 @@ function validateForm(event) {
         .catch((error) => console.log(error));
     }
   }
+  
