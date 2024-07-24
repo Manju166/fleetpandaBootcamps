@@ -14,7 +14,7 @@ function validateForm(event) {
     errorName.textContent = "Name is required.";
   } else {
     errorName.textContent = "";
-    isValid=true;
+    isValid = true;
   }
   if (email === "") {
     errorEmail.textContent = "Email is required.";
@@ -24,9 +24,9 @@ function validateForm(event) {
     isValid = false;
   } else {
     errorEmail.textContent = "";
-    isValid=true;
+    isValid = true;
   }
-  
+
   if (password === "") {
     errorPassword.textContent = "Password is required.";
     isValid = false;
@@ -37,12 +37,12 @@ function validateForm(event) {
     errorPassword.textContent = "";
     isValid = true;
   }
+
   if (isValid) {
-   
     const formData = {
-      name: name,
-      email: email,
-      password: password,
+      name,
+      email,
+      password,
     };
     fetch("https://jsonplaceholder.typicode.com/users", {
       method: "POST",
@@ -50,14 +50,13 @@ function validateForm(event) {
       body: JSON.stringify(formData),
     })
       .then((res) => res.json())
-      .then((data) => {console.log(data)
-        if(data){
-          alert("User created successfully")
-          window.location="../App/login.html"
+      .then((data) => {
+        console.log(data);
+        if (data) {
+          alert("User created successfully");
+          window.location = "../App/login.html";
         }
-  })
-
+      })
       .catch((error) => console.log(error));
- 
   }
 }
