@@ -1,3 +1,5 @@
+import { request } from "./register.js";
+
 
 function getPostIdFromUrl() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -5,26 +7,26 @@ function getPostIdFromUrl() {
 }
 const postId = getPostIdFromUrl();
 const apiUrl = `https://jsonplaceholder.typicode.com/posts/${postId}`;
-fetch(apiUrl)
+
+request(apiUrl,"GET")
   .then((response) => {
-    if (!response.ok) {
+    if (!response) {
       throw new Error("Network response was not ok");
     }
-    return response.json();
+    return response;
   })
   .then((postDetails) => {
     console.log(postDetails);
-    document.getElementById("post-title").innerText = postDetails.title;
-    document.getElementById("post-body").innerText = postDetails.body;
+    document.getElementById("post-title").innerText = postDetails.blogTitle;
+    document.getElementById("post-body").innerText = postDetails.blogDescription;
   })
   .catch((error) => {
     console.error("Error:", error);
   });
 
   function logout() {
-    // localStorage.clear();   ->clear all the key values
-    localStorage.removeItem("email");
+    localStorage.clear();  
     alert("Loged out");
     window.location.href = "../index.html";
   }
-  
+  window.logout = logout;
