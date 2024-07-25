@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/login.css" />
   </head>
   <body>
-    <form action="/index/login.html" onsubmit="validateForm(event)">
+    <form id="loginForm">
       <div class="loginform">
         <h1>Hello Welcome</h1>
 
@@ -18,7 +18,7 @@
           id="name"
           placeholder="Enter your name"
         />
-        <span id="nameError" style="color: red"></span>
+        <span id="nameError" class="error"></span>
 
         <label for="email">Email:</label>
         <input
@@ -39,16 +39,15 @@
         /> -->
         <span class="error" id="passwordError"></span>
 
-        <button type="submit" onclick="loginSubmit()">Login</button>
+        <button type="submit">Login</button>
 
         <p style="margin-top: 2rem; text-align: center">
-          Don't have an account?<a href="signup.html" style="color: blue"
-            >Sign Up</a
-          >
+          Don't have an account?<a href="signup.html" style="color: blue">Sign Up</a>
         </p>
       </div>
     </form>
 
-    <script src="../scripts/login.js"></script>
+    <script type="module" src="../scripts/login.js"></script>
   </body>
 </html>
+

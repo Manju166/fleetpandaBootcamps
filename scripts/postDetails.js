@@ -1,3 +1,4 @@
+
 function getPostIdFromUrl() {
   const urlParams = new URLSearchParams(window.location.search);
   return urlParams.get("id");
@@ -27,9 +28,3 @@ fetch(apiUrl)
     window.location.href = "../index.html";
   }
   
-
-
-
-
-
-

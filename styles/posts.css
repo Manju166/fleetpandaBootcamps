@@ -8,35 +8,36 @@ header{
     background-color: white;
     padding: 10px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.nav{
+  }
+  .nav{
     border: 1px solid rgb(192, 188, 188);
     border-radius: 20px;
     height: 40px;
-}
-ul{
+    width: 50%;
+  }
+  ul{
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 2rem;
     margin-left: -2rem;
-}
-header img{
+  }
+  header img{
     width: 20%;
     height: 10vh;
-}
-ul li{
+  }
+  ul li{
     font-size: 18px;
     font-weight: bold;
-}
-li a{
+  }
+  li a{
     text-decoration: none;
     color: rgb(59, 59, 59);
-}
-a img{
+  }
+  a img{
     width: 100%;
-}
-.logoutBtn{
+  }
+  .logoutBtn{
     background-color: chocolate;
     padding: 8px;
     width: 90px;
@@ -44,9 +45,9 @@ a img{
     border-radius: 5px;
     color: #ddd;
     font-size: 16px;
-}
-
-#postcontainer{
+  }
+  
+  #postcontainer{
     width: 100%;
     height: 100%;
     background-color: #fff;
@@ -54,70 +55,72 @@ a img{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-}
-#card {
+  }
+  #card {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
     margin: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 20%;
-}
-#card h3 {
+  }
+  #card h3 {
     margin-top: 0;
     height: 10vh;
-}
-#card p{
+  }
+  #card p{
     height: 25vh;
-}
-#card button{
+  }
+  #card button{
     padding: 10px;
     border: none;
     border-radius: 5px;
     width: 40%;
     margin: auto 4rem;
-}
-@media (max-width: 1200px) {
+  }
+  @media (max-width: 1200px) {
     header img {
         width: 25%;
     }
-
+  
     #card {
         width: 30%;
     }
-}
-
-@media (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
    
     ul {
         display: none;
     }
-
+  
     header img {
         width: 50%;
         height: auto;
     }
-
+  
     #card {
         width: 45%;
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 480px) {
     ul {
         gap: 1rem;
     }
-
+  
     header img {
         width: 70%;
     }
-
+  
     #card {
         width: 90%;
     }
-
+  
     #card button {
         width: 80%;
         margin: auto;
     }
-}
+  }
+
+  
