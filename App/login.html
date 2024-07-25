@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
+    <form id="loginForm">
+      <div class="loginform">
+        <h1>Hello Welcome</h1>
+
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+        />
+        <span id="nameError" class="error"></span>
+
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          autocomplete="off"
+          placeholder="Enter Email Address"
+        />
+        <span class="error" id="emailError"></span>
+
+        <!-- <label for="password">Password:</label>
+        <input
+          type="password"
+          name="password"
+          id="password" autocomplete="off"
+          placeholder="Enter Password"
+        /> -->
+        <span class="error" id="passwordError"></span>
+
+        <button type="submit">Login</button>
+
+        <p style="margin-top: 2rem; text-align: center">
+          Don't have an account?<a href="signup.html" style="color: blue">Sign Up</a>
+        </p>
+      </div>
+    </form>
+
+    <script type="module" src="../scripts/login.js"></script>
+  </body>
+</html>
